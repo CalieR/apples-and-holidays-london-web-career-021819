@@ -85,5 +85,6 @@ def all_holidays_with_bbq(holiday_hash)
         yes << k.to_sym
       end
     end
+  end
     yes
 end
