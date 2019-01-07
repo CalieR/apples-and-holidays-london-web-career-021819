@@ -82,7 +82,7 @@ def all_holidays_with_bbq(holiday_hash)
   holiday_hash.each do |season, celebration|
     #...to access the hash with holiday names(celebration)
     celebration.each do |k, v|
-      if v.include?("BBQ")
+      if v.include?("BBQ") # include?, not == because looking within an array
         yes << k # k is already a symbol so leave it be
       end
     end
