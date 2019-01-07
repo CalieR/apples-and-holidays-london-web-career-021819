@@ -82,7 +82,7 @@ def all_holidays_with_bbq(holiday_hash)
   holiday_hash.each do |season, celebration|
     celebration.each do |k, v|
       if v.include?("BBQ")
-        yes << k.to_sym
+        yes << k
       end
     end
   end
