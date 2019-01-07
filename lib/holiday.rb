@@ -65,10 +65,12 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
   holiday_hash.each do |season, details|
     puts "#{season.capitalize}:"
+    # nest iteration within iteration
     details.each do |hol, stuff|
-      holiday = hol.to_s.split("_")
-                .collect { |x| x.capitalize! }
-                .join(" ")
+      # can chain lots of operations instead of initialising multiple variables
+      holiday = hol.to_s.split("_") #string to array
+                .collect { |x| x.capitalize! } # iterate over array
+                .join(" ") # array to string
       puts "  #{holiday}: #{stuff.join(", ")}"
     end
   end
