@@ -80,11 +80,12 @@ def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   yes = []
   holiday_hash.each do |season, celebration|
+    #...to access the hash with holiday names(celebration)
     celebration.each do |k, v|
       if v.include?("BBQ")
-        yes << k
+        yes << k # k is already a symbol so leave it be
       end
     end
   end
-    yes
+  yes
 end
